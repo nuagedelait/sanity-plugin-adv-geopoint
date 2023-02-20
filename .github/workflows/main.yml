@@ -57,7 +57,7 @@ jobs:
       - run: yarn global add eslint
       - run: yarn --frozen-lockfile 
         # Linting can be skipped
-      - run: yarn run lint --if-present
+      - run: yarn run lint
         if: github.event.inputs.test != 'false'
         # But not the build script, as semantic-release will crash if this command fails so it makes sense to test it early
       - run: yarn run prepublishOnly --if-present
