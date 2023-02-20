@@ -14,7 +14,7 @@ run-name: >-
 on:
   # Build on commits pushed to branches without a PR if it's in the allowlist
   push:
-    branches: ['releases/**']
+    branches: ['release/**']
   # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
   workflow_dispatch:
     inputs:
