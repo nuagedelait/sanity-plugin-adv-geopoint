@@ -54,7 +54,6 @@ jobs:
         with:
           cache: npm
           node-version: lts/*
-      - run: yarn global add eslint
       - run: yarn --frozen-lockfile 
         # Linting can be skipped
       - run: yarn run lint
