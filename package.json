@@ -6,13 +6,13 @@
     "sanity",
     "sanity-plugin"
   ],
-  "homepage": "https://github.com/nuagedelait/sanity-plugin-tabs#readme",
+  "homepage": "https://github.com/nuagedelait/sanity-plugin-adv-geopoint#readme",
   "bugs": {
-    "url": "https://github.com/nuagedelait/sanity-plugin-tabs/issues"
+    "url": "https://github.com/nuagedelait/sanity-plugin-adv-geopoint/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/nuagedelait/sanity-plugin-tabs.git"
+    "url": "git+ssh://git@github.com/nuagedelait/sanity-plugin-adv-geopoint.git"
   },
   "license": "BSD-3-Clause",
   "author": "nuagedelait <oliver@nuagedelait.com>",
