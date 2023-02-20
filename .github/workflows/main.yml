@@ -61,8 +61,6 @@ jobs:
 
   release:
     needs: [build]
-    # only run if opt-in during workflow_dispatch
-    if: always() && github.event.inputs.release == 'true' && needs.build.result != 'failure' && needs.test.result != 'failure' && needs.test.result != 'cancelled'
     runs-on: ubuntu-latest
     name: Semantic release
     steps:
