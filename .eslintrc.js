@@ -34,6 +34,8 @@ module.exports = {
     ],
     'no-shadow': 'off',
     'react/display-name': 0,
+    'react/react-in-jsx-scope': 0,
+    'react-hooks/exhaustive-deps': 0,
     'react/jsx-no-bind': 0,
     'no-use-before-define': 0
   },

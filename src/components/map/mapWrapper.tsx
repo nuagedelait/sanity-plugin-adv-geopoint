@@ -8,15 +8,14 @@ const STATUS = {
 };
 
 export default (props: any) => {
-
   const { apiKey, children } = props;
 
   const [status, setStatus] = useState(STATUS.LOADING);
 
   useEffect(() => {
     const loader = new Loader({ libraries: ["places"], apiKey });
-    const setStatusAndExecuteCallback = (status:any) => {
-      setStatus(status);
+    const setStatusAndExecuteCallback = (newStatus: any) => {
+      setStatus(newStatus);
     };
     loader.load().then(
       () => setStatusAndExecuteCallback(STATUS.SUCCESS),

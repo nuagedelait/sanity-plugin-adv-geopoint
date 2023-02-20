@@ -6,5 +6,5 @@ export default {
   type: "string",
   components: {
     input: CountrySelector,
-  }
+  },
 };

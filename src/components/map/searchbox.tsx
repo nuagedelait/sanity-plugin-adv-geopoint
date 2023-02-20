@@ -1,4 +1,4 @@
-import { useEffect, useRef, forwardRef } from "react";
+import { useEffect, useRef } from "react";
 import { TextInput } from "@sanity/ui";
 
 interface SearchBoxProps {
@@ -27,6 +27,9 @@ const SearchBox = (props: SearchBoxProps) => {
         }
       };
     }
+    return () => {
+      (window as any).google.maps.event.clearListeners();
+    };
   }, [inputRef.current]);
 
   return (
@@ -34,7 +37,7 @@ const SearchBox = (props: SearchBoxProps) => {
       ref={(node) => {
         inputRef.current = node;
       }}
-    ></TextInput>
+    />
   );
 };
 
