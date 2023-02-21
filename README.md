@@ -1,4 +1,4 @@
-# sanity-plugin-tabs
+# sanity-plugin-adv-geopoint
 
 > This is a **Sanity Studio v3** plugin.
 
