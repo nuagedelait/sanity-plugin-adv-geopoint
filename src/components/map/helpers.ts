@@ -1,20 +1,10 @@
 import React, { EffectCallback } from "react";
-import { createCustomEqual } from "fast-equals";
-
-/* eslint-disable */
-export const deepCompareEqualsForMaps = createCustomEqual(
-  (deepEqual) => (a, b) => {
-    // TODO extend to other types
-    // use fast-equals for other objects
-    return deepEqual(a, b);
-  }
-);
-
+import { deepEqual } from "fast-equals";
 
 export function useDeepCompareMemoize(value: any): any {
   const ref = React.useRef();
 
-  if (!deepCompareEqualsForMaps(value, ref.current)) {
+  if (!deepEqual(value, ref.current)) {
     ref.current = value;
   }
   return ref.current;
