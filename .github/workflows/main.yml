@@ -61,10 +61,11 @@ jobs:
         with:
           cache: npm
           node-version: lts/*
+      - run: yarn --frozen-lockfile 
       - run: yarn run lint
 
   build:
-    needs: [install]
+    needs: [test]
     runs-on: ubuntu-latest
     name: build
     steps:
@@ -73,6 +74,7 @@ jobs:
         with:
           cache: npm
           node-version: lts/*
+      - run: yarn --frozen-lockfile 
       - run: yarn run prepublishOnly
 
   release:
