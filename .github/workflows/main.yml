@@ -91,11 +91,10 @@ jobs:
         with:
           cache: npm
           node-version: lts/*
-          registry-url: 'https://npm.pkg.github.com'
+          registry-url: 'https://registry.npmjs.org/'
           scope: '@nuagedelait'
       - run: yarn --frozen-lockfile
-      - run: npm publish
-        if: always()
+      - run: npm publish --access public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
