@@ -92,6 +92,7 @@ jobs:
           cache: npm
           node-version: lts/*
           registry-url: 'https://npm.pkg.github.com'
+          scope: '@nuagedelait'
       - run: yarn --frozen-lockfile
       - run: npm publish --access public
         if: always()

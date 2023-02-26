@@ -88,5 +88,8 @@
   "engines": {
     "node": ">=14"
   },
-  "yalcSig": "0d301ee4d8379112d29f95bbdf9e0148"
+  "yalcSig": "0d301ee4d8379112d29f95bbdf9e0148",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  }
 }
