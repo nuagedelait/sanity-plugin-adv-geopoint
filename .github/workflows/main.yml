@@ -94,7 +94,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@nuagedelait'
       - run: yarn --frozen-lockfile
-      - run: npm publish --access public
+      - run: npm publish
         if: always()
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
