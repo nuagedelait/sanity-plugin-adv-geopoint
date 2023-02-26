@@ -50,7 +50,7 @@ jobs:
           cache: npm
           cache-dependency-path: '**/package-lock.json'
           node-version: lts/*
-      - run: yarn --frozen-lockfile
+      - run: npm ci
 
   test:
     needs: [install]
@@ -62,7 +62,7 @@ jobs:
           cache: npm
           cache-dependency-path: '**/package-lock.json'
           node-version: lts/*
-      - run: yarn run lint
+      - run: npm run lint
 
   build:
     needs: [test]
@@ -74,7 +74,7 @@ jobs:
           cache: npm
           cache-dependency-path: '**/package-lock.json'
           node-version: lts/*
-      - run: yarn run prepublishOnly
+      - run: npm run prepublishOnly
 
   release:
     needs: [build]
